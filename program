@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 150px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 150px}
+    #history {margin-left: 340px}
+    #traffic {margin-left: 340px}
+    #store {margin-left: 340px}
+    #oyster {margin-left: 340px}
+    #mullet {margin-left: 340px}
+    #activeity {margin-left: 340px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    .hover{color:rgba(77,77,77,0.3);}
+
+    * {box-sizing:border-box}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 800px;
+      max-height: 400px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 18px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 4px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/4 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    </style>
+  </head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="#" class="w3-bar-item w3-button w3-padding-large ">
+    <img src="https://creating1.w3spaces.com/pic.png" style="width:100%">
+  </a>
+  <a href="#history" class="w3-bar-item w3-button w3-padding-large ">
+    <h6>歷史人文</h6>
+  </a>
+  <a href="#traffic" class="w3-bar-item w3-button w3-padding-large">
+    <h6>交通指南</h6>
+  </a>
+  <a href="#store" class="w3-bar-item w3-button w3-padding-large">
+    <h6>文創商品</h6>
+  </a>
+  <a href="#oyster" class="w3-bar-item w3-button w3-padding-large">
+    <h6>蚵仔介紹</h6>
+  </a>
+  <a href="#mullet" class="w3-bar-item w3-button w3-padding-large">
+    <h6>烏魚子介紹</h6>
+  </a>
+  <a href="#activeity" class="w3-bar-item w3-button w3-padding-large">
+    <h6>活動快訊</h6>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-content w3-justify w3-text-white w3-padding-64" id="home">
+    <h1><b>蚵仔寮觀光網站</b></h1>
+    <br>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="https://khh.travel/image/20397/?r=1590473988689"  width="800" height="500">
+        <br>
+        <div class="text">蚵仔寮漁港</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="https://cdn2.ettoday.net/images/5891/d5891224.jpg" width="800" height="500">
+        <div class="text">蚵仔寮晚霞</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="https://www.agriharvest.tw/wp-content/uploads/2019/12/%E6%9B%AC%E7%83%8F%E9%AD%9A%E5%AD%90%E6%98%AF%E8%87%A8%E6%B5%B7%E6%BC%81%E6%9D%91%E5%B9%B4%E5%89%8D%E5%B8%B8%E8%A6%8B%E7%9A%84%E6%99%AF%E8%B1%A1.jpg" width="800" height="500">
+        <div class="text">曬烏魚子</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="https://images.squarespace-cdn.com/content/v1/5c3ee804f93fd4bdd0be1012/1577449077548-8BDU3VS6JLQLRRDTN52L/IMG_9682.jpg?format=1500w" width="800" height="500">
+        <div class="text">蚵仔寮小搖滾</div>
+      </div>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+  </header>
+
+  <!-- History Section -->
+  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="history">
+    <h2 class="w3-text-light-white">歷史人文</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <h5>
+      二百多年前，位於今日典寶溪下游的內海一帶，盛產蚵類。而清康熙年間，有大量福建曾、黃兩姓及漳州蔡姓人家移民來此，以典寶溪出口處分北、南定居，皆以插蚵為業，因此得名。又因該地居民分北、南而居，南邊居民部落稱為下蚵子寮，北邊部落就稱為頂蚵子寮。下蚵子寮本來有一百五十多戶住家，後於西元１９１０年的一陣暴風雨及海水倒灌侵入後，該地內海地盤流失，西元１９３２年十一月，於管轄區變更時，有二十多戶住家，被編入左營庄。觀光魚市場內，可看到上百種以上的新鮮上等的活跳海鮮漁獲也可當場試吃店家現做的虱目魚丸及其他花枝丸等。尤其是每年一到冬季時分，由於台灣海峽的黑潮支流作用之下，烏魚成為蚵仔寮最為豐收的漁獲量之一，每年皆可捕撈到上千公噸的烏魚，漁民們會將捕撈到的烏魚，從中取出烏魚卵及烏魚腱並加以加工醃曬。
+    </h5>
+    </div>
+  
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="traffic">
+    <h2 class="w3-text-light-white">交通指南</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div >
+      <ul>
+        <li><h5>國道一號下岡山交流道，沿縣道186線(安招路、介壽東路、介壽路)西行，接台19甲(介壽西路、頂潭路、石潭路、梓官路、大舍東路、大舍西路、赤崁東路)到底左轉鄉道高23線(赤崁南路)，左轉通安路右轉中正路即可到達。</h5></li>
+        <li><h5>南台灣客運紅53B和53D公車，直接由梓官區通港路接中正路直行至赤崁路經捷運世運站返回高鐵左營站。</h5></li>
+      </ul>
+    </div>
+    <br>
+    <div class="w3-section">
+      <h5><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>地址:高雄市梓官區</h5><br>
+      <h5><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> E-mail:mail@mail.com</h5><br>
+    </div><br>
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="store">
+    <h2 class="w3-text-light-white">文創商品</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for store -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="https://creating1.w3spaces.com/han3.jpg" style="width:100%">
+        <img src="https://creating1.w3spaces.com/han4.jpg" style="width:100%">
+        <img src="https://creating1.w3spaces.com/red.jpg" style="width:100%">
+        <img src="https://creating1.w3spaces.com/1111.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="https://creating1.w3spaces.com/han7.jpg" style="width:100%">
+        <img src="https://creating1.w3spaces.com/two.jpg" style="width:100%">
+        <img src="https://creating1.w3spaces.com/white.jpg" style="width:100%">
+        <img src="https://creating1.w3spaces.com/2.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- oyster Section -->
+  <div class="w3-padding-64 w3-content w3-text-white" id="oyster">
+    <h2 class="w3-text-light-white">蚵仔介紹</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="w3-section">
+      <h5>學名牡蠣，又稱蚵仔、蚵、蠔、生蠔等，產於海水或鹹淡水交界處，以食浮游生物為生。蚵仔有許多品種，例如著名法國銅蠔、澳洲石蠔、太平洋蠔等等，其中中國廣東湛江官渡出產「官渡蠔」為食家首選，而台灣市面上的牡蠣一般屬於葡萄牙牡蠣（Crassostrea angulata）。這種牡蠣其實原產於台灣，推測跟著葡萄牙人的船回到葡萄牙繁殖，也因為當時最先研究的歐洲人有優先命名權，因此得名並延用至今。葡萄牙牡蠣的極限體長沒有太平洋牡蠣大，不過要養到如同市售太平洋牡蠣的體型，其實只是養殖時間長短以及養殖模式的問題。 不過，畢竟生物的成長曲線到了後期是趨於平緩的，如果突然死掉就血本無歸，所以這邊體型的問題就是養殖模式的問題。如果要養大，生長時間勢必拉長，同時進行養殖模式改變，進行單體牡蠣養殖或是三倍體養殖。</h5>
+      <br>
+      <h5>傳說在5至8月不宜生食牡蠣。事實是當時正值牡蠣的繁殖季節，食用5至8月的新鮮牡蠣不會對健康有影響，只是肉質較差。是時由於天氣原因、海水溫度高，導致海水生菌數上升，微生物繁殖可能也更快，其中像大腸桿菌極可能超標，導致生食或加熱不完全食用後腹瀉、食物中毒。</h5>
+       <br>
+      <div >
+        <h5>台灣主要有四種養蚵的方法：插篊式、浮筏式及垂吊和平掛兩種立架法。</h5>
+            <ul>
+              <li><h5>插篊式：將及膝高的竹子插在潮間帶，竹子上端剖開處崁入一兩枚蚵殼，讓蚵苗來附著，利用漲、退潮帶來的養分維生，代表地點：金門。</h5></li>
+              <li><h5>垂吊：台灣本島的蚵農會先挑選較大的蚵殼當母殼鑽孔，再用繩子將母殼串成「蚵串」。蚵農口中的「站棚仔」立架垂吊，是將蚵串綁在蚵架上，另一端下垂到海裡，代表地點：台南七股、雲林台西的蚵農多採用這種方法。</h5></li>
+              <li><h5>平掛：淺海沙灘不易垂掛，因此澎湖、彰化一帶的蚵農改用「倒棚仔」，將蚵串平掛在蚵架上來養殖。</h5></li>
+              <li><h5>浮筏式：前述三種方式都是利用漲、退潮帶來的生物餵養蚵仔，但浮筏式的養殖方式則是讓蚵架長期浮在海上，因此蚵串就一直浸泡在海裡，蚵仔成長速度更快，代表地點：嘉義東石、布袋和台南安平、七股潟湖等地都以這種方式養殖牡蠣。</h5></li>
+            </ul>
+          </div>
+      </div>
+  <!-- End oyster Section -->
+  </div>
+
+  <!-- mullet Section -->
+  <div class="w3-padding-64 w3-content w3-text-white" id="mullet">
+    <h2 class="w3-text-light-white">烏魚子介紹</h2>
+    <hr style="width:200px" class="w3-opacity" >
+    <div class="w3-section">
+      <h5>是一種以已孕的烏魚卵巢統稱「烏魚子」，是鹽漬後乾燥的水產加工食品。野生烏魚的卵顏色若是呈現成比起一般黃色或橘色的烏魚子還要黑甚至是黑色，就是俗稱「血子」或「黑子」。</h5>
+      <br>
+      <h5>烏魚分布於全球各地溫、熱帶海域，主要棲息在淡鹹水沿岸沙泥底水域，並進行迴游。環地中海區國家也有以相同物種及其他物種如鮪魚的魚卵鹽漬後乾燥的魚卵產品。為沿海重要的食用魚。1990年代，由於迴游路線上長久捕撈，台灣沿海汙染嚴重，海溫上升影響洄游路線等因素，造成漁獲下降。目前亦逐漸盛行在魚塭飼養。（台灣西南岸為東海沿岸烏魚冬季南下洄游產卵地，因此魚卵通常也相對北方捕撈到的成熟。）</h5>
+      <br>
+      <div >
+        <h5>市售烏魚子約有幾種來源：</h5>
+            <ul>
+              <li><h5>野生烏魚的烏魚子：為冬至前後，烏魚順寒流洄游而下所捕獲野生母烏魚，取魚卵後製成。</h5></li>
+              <li><h5>養殖烏魚的烏魚子：約11月份起，養殖3至4年烏魚，魚卵夠大才能製作烏魚子，經養殖業者確認魚卵成熟度後，整批收成取魚卵後製成。</h5></li>
+              <li><h5>中國大陸產的烏魚子：過去中國並不流行食用烏魚子，受到電視節目報導，近年來中國大陸也會捕捉迴游烏魚，取卵製成烏魚子。</h5></li>
+              <li><h5>巴西或美國進口同屬不同種鯔魚卵巢製成的烏魚子：由於非新鮮直接製成烏魚子，口感與色澤都會有所差異。</h5></li>
+              <li><h5>坊間有謠傳用豆仔魚製成烏魚子：實際上因豆子魚體型小，取出魚卵量少，一般都是拿來生煎或煮食，製成烏魚子尺寸太小，無法銷售。</h5></li>
+              <li><h5>日本琉球沖繩製作烏魚子的傳統：也是琉球的名產，但是產量還是台灣為大宗。</h5></li>
+            </ul>
+          </div>
+      </div>
+  <!-- End mullet Section -->
+  </div>
+  
+  <!-- activeity Section -->
+  <div class="w3-padding-64 w3-content w3-text-white" id="activeity">
+    <h2 class="w3-text-light-white">活動快訊</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="w3-section">
+      <ol>
+        <li><h5>睽違六年蚵仔寮漁村小搖滾今登場 上百名樂迷嗨翻漁港</h5></li>
+        <li><h5></h5></li>
+        <li><h5></h5></li>
+        <li><h5></h5></li>
+      </ol>
+      </div>
+  <!-- End activeity Section -->
+  </div>
+  
+  <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-content w3-padding-64 w3-text-white w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+    <!-- End footer -->
+    </footer>
+
+    <!-- END PAGE CONTENT -->
+  </div>
+  <script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</body>
+</html>
